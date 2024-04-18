@@ -7,14 +7,13 @@ const counterSlice = createSlice({
     initialState,
     reducers: {
         incremented(state, action) {
-            state.counter = state + action.payload
+            return state + action.payload
         },
         decremented(state, action) {
-            state.counter = state - 1
+            return state - 1
         }
     }
 })
 
 export const { incremented, decremented } = counterSlice.actions
-
 export default counterSlice.reducer;
